@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080a18">
+<title>Para Karen, mi princesa ✨</title>
+<style>
+:root{--bg:#070914;--panel:rgba(20,23,47,.78);--pink:#f0b6d7;--lav:#c9b8ff;--text:#f7f3ff;--muted:#c8c5dc;--gold:#f5d9a6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(ellipse at 20% 5%,#252044 0,transparent 35%),radial-gradient(ellipse at 85% 35%,#211631 0,transparent 32%),linear-gradient(180deg,#070914,#10132a 55%,#080914);overflow-x:hidden}
+#stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.wrap{width:min(940px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:12px;font-family:Arial,sans-serif;font-size:.85rem;color:var(--muted)}
+nav a{color:inherit;text-decoration:none;margin-left:14px}
+nav a:hover{color:white}
+.hero{min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:52px 0 80px;position:relative}
+.eyebrow{letter-spacing:.24em;text-transform:uppercase;font:600 .7rem Arial,sans-serif;color:var(--gold)}
+h1{font-size:clamp(2.8rem,8vw,5.8rem);font-weight:normal;line-height:1.02;margin:22px 0;background:linear-gradient(100deg,#fff,#f3cbe2 48%,#cbbcff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 40px #b9a2ff20}
+.hero p{max-width:620px;color:var(--muted);font-size:clamp(1.05rem,2.4vw,1.25rem);line-height:1.8}
+.button{display:inline-block;margin-top:22px;padding:13px 22px;border:1px solid #d9b9e8a6;border-radius:999px;color:#fff;text-decoration:none;background:#b99ad21c;transition:.25s;font-family:Arial,sans-serif;font-size:.9rem}
+.button:hover{background:#b99ad244;transform:translateY(-2px)}
+.sparkle{font-size:1.6rem;color:var(--pink);filter:drop-shadow(0 0 12px #f0b6d7)}
+section{padding:66px 0}
+.section-label{text-align:center;text-transform:uppercase;letter-spacing:.22em;color:var(--gold);font:600 .7rem Arial,sans-serif}
+h2{text-align:center;font-size:clamp(2rem,5vw,3.3rem);font-weight:normal;margin:13px 0 28px}
+.intro{text-align:center;color:var(--muted);line-height:1.8;max-width:650px;margin:0 auto 30px}
+.card{border:1px solid #d9c8ff25;border-radius:24px;background:var(--panel);box-shadow:0 20px 80px #0003;backdrop-filter:blur(8px)}
+.letter{max-width:760px;margin:auto;padding:clamp(24px,5vw,48px);font-size:1.12rem;line-height:1.95;color:#e8e4f4}
+.letter p{margin:0 0 18px}
+.signature{color:var(--pink);font-style:italic;text-align:right;margin-top:26px!important}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.photo{min-height:250px;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(145deg,#292443,#12162b 55%,#4a2b4c);border:1px solid #e4d8ff2b;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#e9dff8}
+.photo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover}
+.photo span{position:relative;z-index:1;text-shadow:0 2px 15px #000}
+.photo.has-img span{display:none}
+.photo small{display:block;font: .8rem Arial,sans-serif;color:#d0c7e5;margin-top:8px}
+.music-card{max-width:680px;margin:auto;padding:28px;text-align:center}
+.disc{width:94px;height:94px;border-radius:50%;margin:0 auto 18px;background:radial-gradient(circle,#090a16 0 13%,#d4b0de 14% 18%,#33234d 19% 50%,#c49acb 51% 55%,#17152d 56%);box-shadow:0 0 45px #ca9bdb30;display:grid;place-items:center;font-size:1.5rem}
+.music-card p{color:var(--muted);line-height:1.7}
+.music-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+footer{text-align:center;padding:50px 0 65px;color:#aaa6c3;font-size:.9rem}
+footer .heart{color:#f0a9cf}
+.note{font: .82rem/1.6 Arial,sans-serif;color:#aaa6c3;margin-top:20px}
+@media(max-width:650px){nav{align-items:flex-start;flex-direction:column}nav a{margin:0 12px 0 0}.gallery{grid-template-columns:1fr 1fr}.photo{min-height:210px}.photo:last-child{grid-column:span 2;min-height:180px}.hero{min-height:72vh}}
+@media(max-width:390px){.gallery{grid-template-columns:1fr}.photo,.photo:last-child{grid-column:auto;min-height:230px}}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="wrap">
+<nav><span>✦ PARA MI PRINCESA</span><div><a href="#carta">La carta</a><a href="#recuerdos">Recuerdos</a><a href="#cancion">Nuestra canción</a></div></nav>
+<header class="hero">
+  <div class="eyebrow">Una pequeña sorpresa para Karen</div>
+  <div class="sparkle">✧ ✦ ✧</div>
+  <h1>Tú, en todos<br>mis universos</h1>
+  <p>Entre tantas personas, tantos caminos y tantas estrellas, qué bonito que la vida me haya permitido coincidir contigo.</p>
+  <a class="button" href="#carta">Tengo algo que decirte ↓</a>
+</header>
+
+<section id="carta">
+  <div class="section-label">Desde el corazón</div>
+  <h2>Gracias por ser tú, princesa</h2>
+  <article class="card letter">
+    <p>Mi Karen, mi princesa:</p>
+    <p>A veces siento que un simple “te amo” no alcanza para explicar todo lo que significas para mí. Por eso quise hacerte este pequeño rincón: para guardar un poquito de lo que siento y recordarte lo agradecido que estoy de tenerte en mi vida.</p>
+    <p>Gracias por tu amor, por tu compañía, por cada sonrisa, cada abrazo, cada conversación y por todos esos momentos que, quizá para el mundo sean pequeños, pero para mí se vuelven recuerdos que quiero conservar. Gracias por compartir conmigo una parte de tu vida y por permitirme ser parte de la tuya.</p>
+    <p>Contigo he aprendido que el cariño también está en los detalles, en estar presentes, en escucharnos y en elegir cuidarnos incluso cuando los días no son perfectos. No quiero dar por sentado nada de lo que vivimos; quiero seguir valorándolo y construyendo contigo recuerdos que algún día miremos con una sonrisa.</p>
+    <p>No puedo prometer que todos los días serán perfectos, pero sí quiero que mis acciones acompañen mis palabras: que puedas sentirte querida, respetada, escuchada y apreciada. Quiero seguir aprendiendo de ti, apoyarte en tus sueños y celebrar tus alegrías como si fueran mías.</p>
+    <p>Si pudiera pedir algo para nosotros, sería que nunca nos falten la sinceridad, la paciencia, las ganas de hablar y el deseo de seguir creciendo juntos. Gracias por ser parte de mi historia y por hacer que tantos momentos tengan un significado especial.</p>
+    <p>Esta página es pequeña comparada con todo lo que quisiera decirte, pero cada detalle está hecho pensando en ti. Ojalá, cuando la vuelvas a abrir, te recuerde lo mucho que te quiero y lo feliz que me hace compartir este camino contigo.</p>
+    <p class="signature">Con todo mi amor y agradecimiento,<br>para mi princesa. ♡</p>
+  </article>
+</section>
+
+<section id="recuerdos">
+  <div class="section-label">Pequeños momentos, grandes recuerdos</div>
+  <h2>Nuestra historia ✨</h2>
+  <p class="intro">Aquí van nuestras fotos favoritas. Cambia las imágenes de ejemplo por fotografías tuyas con Karen; puedes añadir más tarjetas si quieres.</p>
+  <div class="gallery">
+    <div class="photo" data-photo="fotos/recuerdo1.jpeg"><span>📷<small>Un momento que guardo en el corazón</small></span></div>
+    <div class="photo" data-photo="fotos/recuerdo2.jpeg"><span>♡<small>Una sonrisa que me encanta</small></span></div>
+    <div class="photo" data-photo="fotos/recuerdo3.jpeg"><span>✦<small>Un recuerdo de nosotros</small></span></div>
+  </div>
+  <p class="note" style="text-align:center">Para añadir fotos, coloca tus imágenes en la carpeta “fotos” con los nombres recuerdo1.jpg, recuerdo2.jpg y recuerdo3.jpg.</p>
+</section>
+
+<section id="cancion">
+  <div class="section-label">Dale play a este recuerdo</div>
+  <h2>Nuestra canción 🎶</h2>
+  <div class="card music-card">
+    <div class="disc">♫</div>
+    <h3 style="font-size:1.45rem;font-weight:normal;margin:8px 0">“Solo por vos”</h3>
+    <p>Trueno</p>
+    <p>Quiero que escuches esta canción mientras lees estas palabras y recuerdas que este pequeño detalle está hecho para ti.</p>
+    <div class="music-links">
+      <a class="button" href="https://www.youtube.com/results?search_query=Trueno+Solo+por+vos" target="_blank" rel="noopener">Escuchar en YouTube ↗</a>
+      <a class="button" href="https://open.spotify.com/search/Trueno%20Solo%20por%20vos" target="_blank" rel="noopener">Buscar en Spotify ↗</a>
+    </div>
+    <p class="note">Los enlaces abren la búsqueda de la canción. Si quieres incrustar un reproductor directamente aquí, se puede añadir cuando tengas el enlace oficial del video o de la canción.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="sparkle">✧</div>
+  <p>Para Karen, mi princesa <span class="heart">♥</span></p>
+  <p>Gracias por coincidir conmigo en este universo.</p>
+  <small>Hecho con cariño, especialmente para ti.</small>
+</footer>
+</div>
+<script>
+(function(){
+ const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');
+ let w,h,stars=[];
+ function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';stars=Array.from({length:Math.min(180,Math.floor(innerWidth/5))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.3,a:Math.random(),s:Math.random()*.012+.002}));}
+ function draw(){ctx.clearRect(0,0,w,h);for(const s of stars){s.a+=s.s;if(s.a>1||s.a<.15)s.s*=-1;ctx.beginPath();ctx.arc(s.x,s.y,s.r*devicePixelRatio,0,Math.PI*2);ctx.fillStyle='rgba(245,225,255,'+Math.max(.15,Math.min(.85,s.a))+')';ctx.shadowBlur=8*devicePixelRatio;ctx.shadowColor='#c9b8ff';ctx.fill();}requestAnimationFrame(draw);}
+ addEventListener('resize',resize);resize();draw();
+ document.querySelectorAll('[data-photo]').forEach(el=>{const img=new Image();img.onload=()=>{el.prepend(img);el.classList.add('has-img')};img.src=el.dataset.photo;});
+})();
+</script>
+</body>
+</html>
